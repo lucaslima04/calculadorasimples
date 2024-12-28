@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculadora">
+
+        <input type="text" id="visor" disabled>
+
+        <div id="botoes">
+            <div id="numeros">
+                <button class="n" onclick="appendvalue('7')">
+                    7
+                </button>
+
+                <button class="n" onclick="appendvalue('8')">
+                    8
+                </button>
+
+                <button class="n" onclick="appendvalue('9')">
+                    9
+                </button>
+
+                <button class="n" onclick="appendvalue('4')">
+                    4
+                </button>
+
+                <button class="n" onclick="appendvalue('5')">
+                    5
+                </button>
+
+                <button class="n" onclick="appendvalue('6')">
+                    6
+                </button>
+
+                <button class="n" onclick="appendvalue('1')">
+                    1
+                </button>
+
+                <button class="n" onclick="appendvalue('2')">
+                    2
+                </button>
+
+                <button class="n" onclick="appendvalue('3')">
+                    3
+                </button>
+
+                <button class="n" onclick="appendvalue('0')">
+                    0
+                </button>
+
+                <button class="n" onclick="appendvalue('.')">
+                    .
+                </button>
+
+                <button class="n" onclick="clearDisplay()">
+                    C
+                </button>
+            </div>
+
+            <div id="sinais">
+                <button class="s" onclick="appendvalue('+')">
+                    +
+                </button>
+
+                <button class="s" onclick="appendvalue('-')">
+                    -
+                </button>
+
+                <button class="s" onclick="appendvalue('*')">
+                    *
+                </button>
+
+                <button class="s" onclick="appendvalue('/')">
+                    /
+                </button>
+            </div>
+        </div>
+        <button class="c" onclick="calculate()">
+            =
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

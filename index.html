@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculadora">
+
+        <input type="text" id="tela" disabled>
+
+        <div id="botoes">
+            <div id="numeros">
+                <button class="n" onclick="adicionarValor('7')">
+                    7
+                </button>
+
+                <button class="n" onclick="adicionarValor('8')">
+                    8
+                </button>
+
+                <button class="n" onclick="adicionarValor('9')">
+                    9
+                </button>
+
+                <button class="n" onclick="adicionarValor('4')">
+                    4
+                </button>
+
+                <button class="n" onclick="adicionarValor('5')">
+                    5
+                </button>
+
+                <button class="n" onclick="adicionarValor('6')">
+                    6
+                </button>
+
+                <button class="n" onclick="adicionarValor('1')">
+                    1
+                </button>
+
+                <button class="n" onclick="adicionarValor('2')">
+                    2
+                </button>
+
+                <button class="n" onclick="adicionarValor('3')">
+                    3
+                </button>
+
+                <button class="n" onclick="adicionarValor('0')">
+                    0
+                </button>
+
+                <button class="n" onclick="adicionarValor('.')">
+                    .
+                </button>
+
+                <button class="n" onclick="apagarTela()">
+                    C
+                </button>
+            </div>
+
+            <div id="sinais">
+                <button class="s" onclick="adicionarValor('+')">
+                    +
+                </button>
+
+                <button class="s" onclick="adicionarValor('-')">
+                    -
+                </button>
+
+                <button class="s" onclick="adicionarValor('*')">
+                    *
+                </button>
+
+                <button class="s" onclick="adicionarValor('/')">
+                    /
+                </button>
+            </div>
+        </div>
+        <button class="c" onclick="calcular()">
+            =
+        </button>
+    </div>
+    <script>
+        function adicionarValor(value) {
+            document.getElementById("tela").value += value;
+        }
+
+        function apagarTela() {
+            document.getElementById("tela").value = "";
+        }
+
+        function calcular() {
+            try {
+                document.getElementById("tela").value = eval(document.getElementById("tela").value);
+            } 
+            catch (error) {
+                document.getElementById("tela").value = "Erro";
+            }
+        }
+    </script>
+</body>
+</html>
